@@ -4,14 +4,13 @@
 	vm = require('vm'),
 	util = require('util'),
 	path = require('path'),
-	cheerio = require('cheerio'),
-	React = require('react');
+	cheerio = require('cheerio');
 	var windowCtx = null;
 	module.exports = function(grunt) {
-		return grunt.registerMultiTask('react_render', 'Grunt plugin for rendering reactjs controls', function() {
-			var includeInThisContext = function(path) {
+		return grunt.registerMultiTask('react_rendercomponent', 'Grunt plugin for rendering reactjs controls', function() {
+			var includeInThisContext = function(ctx, path) {
 				var code = fs.readFileSync(path);
-				vm.runInContext(code, windowCtx, path);
+				vm.runInContext(code, ctx, path);
 			}.bind(this);
 			/**
 			* Checks if `p` is a filepath, being it has an extension.
@@ -22,12 +21,6 @@
 			function isFilename(p) {
 				return !!path.extname(p);
 			}
-			/**
-			* Render the component to a string
-			*/
-			renderComponent = function(component) {
-				return React.renderComponentToString(component);
-			};
 			var done, opts;
 			done = this.async();
 			opts = this.options({
@@ -37,14 +30,15 @@
 				silent: false
 			});
 			//setup the context
-			var context = {};
+			var context = {
+			};
 			Object.keys(opts.context).forEach(function(key) {
 				context[key] = opts.context[key];
 			});
 			windowCtx = vm.createContext(context);
 			//now that we have the context, include the scripts
 			opts.scripts.forEach(function(c) {
-				includeInThisContext(c);
+				includeInThisContext(windowCtx, c);
 			});
 			this.files.forEach(function(f) {
 				var src, cwd = f.cwd;
@@ -86,7 +80,11 @@
 						$id.each(function(index, comp) {
 							grunt.log.error("Rendering component <" + compCfg.react_class + "> into #"+id);
 							grunt.log.error("Component Props: " + JSON.stringify(compCfg.props));
-							return $id.html(renderComponent(new windowCtx[compCfg.react_class](compCfg.props)));
+							//var component = (windowCtx[compCfg.react_class]).apply(compCfg.props);
+							var component = new windowCtx.UpnpResult(compCfg.props);
+							//grunt.log.error(windowCtx.UpnpResult);
+							//grunt.log.error(JSON.stringify(Object.keys(component)));
+							return $id.html(context.React.renderComponentToString(component));
 						});
 					});
 					grunt.file.write(outFile,$.html());

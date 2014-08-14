@@ -1,23 +1,23 @@
 {
-  "name": "grunt-react-render",
+  "name": "grunt-react-rendercomponent",
   "description": "Grunt plugin for rendering reactjs components in existing markup",
-  "version": "0.1.0",
-  "homepage": "https://github.com/AlexMost/grunt-react-render",
+  "version": "0.11.1",
+  "homepage": "https://github.com/derflocki/grunt-react-rendercomponent",
   "author": {
-    "name": "AlexMost",
-    "email": "alexmost1989@gmail.com"
+    "name": "Florian Dorn",
+    "email": "florian.dorn@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlexMost/grunt-react-render"
+    "url": "https://github.com/derflocki/grunt-react-rendercomponent"
   },
   "bugs": {
-    "url": "https://github.com/AlexMost/grunt-react-render/issues"
+    "url": "https://github.com/derflocki/grunt-react-rendercomponent/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/AlexMost/grunt-react-render/blob/master/LICENSE-MIT"
+      "url": "https://github.com/derflocki/grunt-react-rendercomponent/blob/master/LICENSE-MIT"
     }
   ],
   "engines": {
@@ -29,7 +29,6 @@
   "devDependencies": {
     "grunt-contrib-nodeunit": "^0.3.3",
     "grunt": "~0.4.4",
-    "grunt-contrib-coffee": "^0.10.1",
     "grunt-contrib-watch": "^0.6.1"
   },
   "peerDependencies": {
@@ -39,7 +38,7 @@
     "gruntplugin, render reactjs components, server side rendering, react, reactjs"
   ],
   "dependencies": {
-    "react": "^0.10.0",
+    "react": "^0.11.0",
     "cheerio": "^0.15.0",
     "chalk": "~0.4.0"
   },
