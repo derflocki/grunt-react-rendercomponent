@@ -1,7 +1,7 @@
 {
   "name": "grunt-react-rendercomponent",
   "description": "Grunt plugin for rendering reactjs components in existing markup",
-  "version": "0.11.1",
+  "version": "0.0.1",
   "homepage": "https://github.com/derflocki/grunt-react-rendercomponent",
   "author": {
     "name": "Florian Dorn",
@@ -26,19 +26,11 @@
   "scripts": {
     "test": "grunt nodeunit"
   },
-  "devDependencies": {
-    "grunt-contrib-nodeunit": "^0.3.3",
-    "grunt": "~0.4.4",
-    "grunt-contrib-watch": "^0.6.1"
-  },
-  "peerDependencies": {
-    "grunt": "~0.4.4"
-  },
   "keywords": [
     "gruntplugin, render reactjs components, server side rendering, react, reactjs"
   ],
   "dependencies": {
-    "react": "^0.11.1",
+    "react": "^0.11.1"
   },
   "readmeFilename": "README.md"
 }
