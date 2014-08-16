@@ -27,10 +27,8 @@
     "gruntplugin, render reactjs components, server side rendering, react, reactjs"
   ],
   "dependencies": {
-    "react": "^0.11.1"
-  },
-  "readmeFilename": "README.md",
-  "devDependencies": {
+    "react": "^0.11.1",
     "cheerio": "^0.17.0"
-  }
+  },
+  "readmeFilename": "README.md"
 }
