@@ -38,16 +38,7 @@
     "gruntplugin, render reactjs components, server side rendering, react, reactjs"
   ],
   "dependencies": {
-    "react": "^0.11.0",
-    "cheerio": "^0.15.0",
-    "chalk": "~0.4.0"
+    "react": "^0.11.1",
   },
-  "readme": "# grunt-react-render\n\n> Grunt plugin for rendering reactjs components in existing markup\n\n## Getting Started\nThis plugin requires Grunt `~0.4.4`\n\nIf you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:\n\n```shell\nnpm install grunt-react-render --save-dev\n```\n\nOnce the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:\n\n```js\ngrunt.loadNpmTasks('grunt-react-render');\n```\n\n## The \"react_render\" task\n\n### Overview\nIn your project's Gruntfile, add a section named `react_render` to the data object passed into `grunt.initConfig()`.\n\n```js\ngrunt.initConfig({\n  react_render: {\n    options: {\n      // Task-specific options go here.\n    },\n    your_target: {\n      // Target-specific file lists and/or options go here.\n    },\n  },\n});\n```\n\n### Options\n\n#### options.separator\nType: `String`\nDefault value: `',  '`\n\nA string value that is used to do something with whatever.\n\n#### options.punctuation\nType: `String`\nDefault value: `'.'`\n\nA string value that is used to do something else with whatever else.\n\n### Usage Examples\n\n#### Default Options\nIn this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`\n\n```js\ngrunt.initConfig({\n  react_render: {\n    options: {},\n    files: {\n      'dest/default_options': ['src/testing', 'src/123'],\n    },\n  },\n});\n```\n\n#### Custom Options\nIn this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`\n\n```js\ngrunt.initConfig({\n  react_render: {\n    options: {\n      separator: ': ',\n      punctuation: ' !!!',\n    },\n    files: {\n      'dest/default_options': ['src/testing', 'src/123'],\n    },\n  },\n});\n```\n\n## Contributing\nIn lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).\n\n## Release History\n_(Nothing yet)_\n",
-  "readmeFilename": "README.md",
-  "_id": "grunt-react-render@0.1.0",
-  "dist": {
-    "shasum": "56e3adc0166b17c1f94f58109828aeb84895df46"
-  },
-  "_from": "grunt-react-render@",
-  "_resolved": "https://registry.npmjs.org/grunt-react-render/-/grunt-react-render-0.1.0.tgz"
+  "readmeFilename": "README.md"
 }
