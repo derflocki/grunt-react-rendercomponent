@@ -29,5 +29,8 @@
   "dependencies": {
     "react": "^0.11.1"
   },
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "cheerio": "^0.17.0"
+  }
 }
