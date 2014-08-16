@@ -23,9 +23,6 @@
   "engines": {
     "node": ">= 0.8.0"
   },
-  "scripts": {
-    "test": "grunt nodeunit"
-  },
   "keywords": [
     "gruntplugin, render reactjs components, server side rendering, react, reactjs"
   ],
