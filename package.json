@@ -1,7 +1,7 @@
 {
   "name": "grunt-react-rendercomponent",
   "description": "Grunt plugin for rendering reactjs components in existing markup",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/derflocki/grunt-react-rendercomponent",
   "author": {
     "name": "Florian Dorn",
