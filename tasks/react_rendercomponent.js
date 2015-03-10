@@ -83,7 +83,7 @@
 							var component = (windowCtx[compCfg.react_class]).apply(compCfg.props);
 							//grunt.log.error(windowCtx.UpnpResult);
 							//grunt.log.error(JSON.stringify(Object.keys(component)));
-							return $id.html(context.React.renderComponentToString(component));
+							return $id.html(context.React.renderToString(component));
 						});
 					});
 					grunt.file.write(outFile,$.html());
