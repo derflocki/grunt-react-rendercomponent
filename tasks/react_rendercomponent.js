@@ -80,7 +80,7 @@
 						$id.each(function(index, comp) {
 							grunt.log.error("Rendering component <" + compCfg.react_class + "> into #"+id);
 							grunt.log.error("Component Props: " + JSON.stringify(compCfg.props));
-							var component = (windowCtx[compCfg.react_class]).apply(compCfg.props);
+							var component = context.React.createElement((windowCtx[compCfg.react_class]), compCfg.props);
 							//grunt.log.error(windowCtx.UpnpResult);
 							//grunt.log.error(JSON.stringify(Object.keys(component)));
 							return $id.html(context.React.renderToString(component));
